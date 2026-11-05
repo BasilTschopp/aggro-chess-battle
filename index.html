@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aggro Chess Battle</title>
+<meta name="description" content="Chess with aggro capture animations">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header>
+    <div class="status">
+      <div class="turn" id="turn"><span class="swatch" id="swatch"></span><span id="turnText">TURN: WHITE</span></div>
+      <div class="check" id="check" hidden>CHECK!</div>
+    </div>
+    <div class="btns">
+      <select class="sel" id="modeSel" aria-label="Players">
+        <option value="2">2 PLAYERS</option>
+        <option value="1">1 PLAYER</option>
+      </select>
+      <select class="sel" id="levelSel" aria-label="Computer level" disabled>
+        <option value="0">EASY</option>
+        <option value="1" selected>MEDIUM</option>
+        <option value="2">HARD</option>
+        <option value="3">MASTER</option>
+      </select>
+      <button class="new" id="newBtn" type="button">NEW GAME</button>
+    </div>
+  </header>
+  <div class="board">
+    <canvas id="board" aria-label="Chess board. Tap a piece, then tap where it should go."></canvas>
+    <div class="promo" id="promo" hidden>
+      <div class="panel"><h2>PICK YOUR UPGRADE</h2><div class="opts" id="opts"></div></div>
+    </div>
+  </div>
+</div>
+<script src="chess.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
